@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trivia Quiz - Documentation</title>
+
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+        rel="stylesheet"
+    >
+</head>
+<body class="bg-success">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">Trivia Quiz</a>
+        <div class="navbar-nav">
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link active" href="docs.html">Docs</a>
+        </div>
+    </div>
+</nav>
+
+<div class="container mt-4 mb-5">
+    <div class="row">
+        <div class="col-md-10 mx-auto">
+
+            <div class="card bg-success-subtle">
+                <div class="card-body">
+                    <h1 class="h4 mb-3">Project Documentation</h1>
+
+                    <h2 class="h5 mt-4">Overview</h2>
+                    <p>
+                        This web application is a simple trivia quiz
+                    </p>
+                    <ul>
+                        <li>HTML for structure</li>
+                        <li>Bootstrap for layout and styling</li>
+                        <li>Vanilla JavaScript and fetch() for API calls</li>
+                    </ul>
+
+                    <h2 class="h5 mt-4">The Rest API Used:</h2>
+                    <p>
+                        The app uses the <strong>Open Trivia Database</strong> API:
+                        <a href="https://opentdb.com/api_config.php" target="_blank">
+                            https://opentdb.com/api_config.php
+                        </a>
+                    </p>
+
+                    <h3 class="h6 mt-3">Endpoints incorporated:</h3>
+                    <ul>
+                        <li>
+                            <strong>Categories Endpoint</strong><br>
+                            https://opentdb.com/api_category.php<br>
+                            Which is used on index.html to load the list of trivia categories 
+                            into the dropdown itself.
+                        </li>
+                        <li class="mt-2">
+                            <strong>Questions Endpoint</strong><br>
+
+                            https://opentdb.com/api.php?amount=5&amp;category=9&amp;difficulty=easy<br>
+                            Which was used on quiz.html to load quiz questions based on the users preferences.
+                        </li>
+                    </ul>
+
+                    <h2 class="h5 mt-4">How to Use the Application</h2>
+                    <ol>
+                        <li>Wait for the Category dropdown to load.</li>
+                        <li>Select a category (or leave as is).</li>
+                        <li>Select a difficulty level (or leave as is).</li>
+                        <li>Choose the number of questions (1-20), 20 being the max amount of questions per round.</li>
+                        <li>Click Begin Quiz.</li>
+                        <li>Answer each question by clicking on an answer button.</li>
+                        <li>At the end, view your score and choose to play again with the same settings or go back home.</li>
+                    </ol>
+
+                    <h2 class="h5 mt-4">Functionality Summary</h2>
+                    <ul>
+                        <li>fetch() was used to retrieve data from the API.</li>
+                        <li>Dynamically creates HTML buttons for answers using JavaScript.</li>
+                        <li>Shows the loading messages and error messages if something goes wrong.</li>
+                        <li>Also keeps track of the user's score and displays a final result.</li>
+                    </ul>
+
+                    <h2 class="h5 mt-4">What happens if something goes wrong</h2>
+                    <p>
+                        The app includes simple error handling:
+                    </p>
+                    <ul>
+                        <li>Like if categories cannot be loaded, an error message will be displayed to you.</li>
+                        <li>If no questions are returned, the user is told to try again with different settings.</li>
+                        <li>If the API request fails (for example, no stable connection), It asks you to refresh the page and try again.</li>
+                    </ul>
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
