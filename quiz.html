@@ -26,7 +26,7 @@
         <div class="col-md-8 mx-auto">
 
             <div class="card bg-success-subtle">
-                <div class="card-body bg-success-subtle">
+                <div class="card-body">
                     <h1 class="h4 mb-3 text-center">Trivia Quiz</h1>
 
                     <div id="loadingBox" class="alert alert-info" role="alert" >
@@ -90,7 +90,7 @@
     </div>
 </div>
 
-<!--Bootstrap JS bundle -->
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
@@ -126,7 +126,7 @@ function getQueryParams() {
     return params;
 }
 
-// Loads questions from the Open Trivia DB API
+// loads questions from the API
 function loadQuestions() {
     var loadingBox = document.getElementById("loadingBox");
     var errorBox = document.getElementById("errorBox");
@@ -175,7 +175,7 @@ function loadQuestions() {
         });
 }
 
-// Show the current question and its answers
+//Shows the current question and its answers
 function showQuestion() {
     var question = questions[currentIndex];
 
@@ -204,7 +204,7 @@ function showQuestion() {
         answers[j] = temp;
     }
 
-    // Creation of buttons for each answer
+    //Creation of buttons for each answer
     for (var k = 0; k < answers.length; k++) {
         var btn = document.createElement("button");
         btn.type = "button";
